@@ -1,0 +1,64 @@
+---
+title: "Project_Description"
+author: "tauseef"
+date: "February 24, 2017"
+output: html_document
+---
+
+## Consumer Behavior – Walmart Recruiting: Trip Type Classification
+Use market basket analysis to classify shopping trips
+
+Problem Description:
+Walmart uses both art and science to continually make progress on their core mission of better understanding and serving their customers. One way Walmart is able to improve customers' shopping experiences is by segmenting their store visits into different trip types. 
+Currently, Walmart's trip types are created from a combination of existing customer insights ("art") and purchase history data ("science"). Walmart has categorized the trips contained in this data into 38 distinct types using a proprietary method applied to an extended set of data. 
+We want to recreate this categorization/clustering with a more limited set of features. This could provide new and more robust ways to categorize trips. In other words, we are tasked with categorizing shopping trip types based on the items that customers purchased. To give a few hypothetical examples of trip types: a customer may make a small daily dinner trip, a weekly large grocery trip, a trip to buy gifts for an upcoming holiday, or a seasonal trip to buy clothes.
+
+Data:
+The training set (train.csv) contains a large number of customer visits with the TripType included. You must predict the TripType for each customer visit in the test set (test.csv). Each visit may only have one TripType. You will not be provided with more information than what is given in the data (e.g. what the TripTypes represent or more product information).
+Data fields:
+•	TripType - a categorical id representing the type of shopping trip the customer made. This is the ground truth that you are predicting. TripType_999 is an "other" category.
+•	VisitNumber - an id corresponding to a single trip by a single customer
+•	Weekday - the weekday of the trip
+•	Upc - the UPC number of the product purchased
+•	ScanCount - the number of the given item that was purchased. A negative value indicates a product return.
+•	DepartmentDescription - a high-level description of the item's department
+•	FinelineNumber - a more refined category for each of the products, created by Walmart
+All the relevant files have been share on the github repository. The link is shared below.
+ https://github.com/data-space/consumer-behavior
+
+Overall steps to be involved:
+1.	Exploratory data analysis 
+2.	Variable Transformation 
+3.	Model building phase
+4.	Model testing phase
+Initial tasks:
+Exploratory data analysis:
+Start with the initial exploratory data analysis and will be using R/Python.
+
+Anupriya
+Task: Summary of all the variables included 
+
+Nidhika
+Task: Correlation matrix 
+
+Tauseef
+Task: Plot of weekday vs Department
+
+Tauseef
+Task: Plot of visitnumber vs weekday
+	
+Tauseef
+Task: Check for outliers and missing values. Cap missing values	Anupriya
+
+
+
+\
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+\
