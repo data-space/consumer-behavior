@@ -12,12 +12,25 @@ train <-train[!(train$Upc==""), ]
 train$TripType = as.factor(train$TripType)
 train$DepartmentDescription = as.factor(train$DepartmentDescription)
 
+
+# to display days in weekly order
+train$Weekday <- factor(train$Weekday, levels= c("Monday",
+                                                 "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+train[order(train$Weekday), ]
+
+joint=CrossTable(train$TripType, train$Weekday)
+
+
+library(ggplot2)
+library(easyGgplot2)
+
 #plot frequency bar chart 
 ggplot(data.frame(train), aes(x=train$TripType)) +
   geom_bar()
 
 #frequency count of the triptype
 count(train,'TripType')
+
 
 #plot triptype frequncy bar chart
 ggplot(data.frame(train), aes(x=train$TripType)) +
@@ -52,6 +65,4 @@ ggplot2.barplot(data=train, xName="TripType",
 ggplot2.barplot(data=train, xName="DepartmentDescription",
                 groupName="TripType") +
   theme(axis.text.x=element_text(angle=45,vjust= 1,hjust=1))
-
-
 
