@@ -3,8 +3,8 @@ title: "Untitled"
 author: "tauseef"
 date: "February 23, 2017"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+load(train)
 summary(train)
 ```
 
